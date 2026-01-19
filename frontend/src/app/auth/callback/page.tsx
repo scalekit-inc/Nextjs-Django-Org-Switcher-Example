@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { handleCallback } from '@/lib/api';
 
@@ -8,9 +8,15 @@ export default function CallbackPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
+  const processedRef = useRef(false);
 
   useEffect(() => {
     const processCallback = async () => {
+      // Prevent duplicate processing (React Strict Mode runs effects twice)
+      if (processedRef.current) {
+        return;
+      }
+      processedRef.current = true;
       const code = searchParams.get('code');
       const state = searchParams.get('state');
       const errorParam = searchParams.get('error');
