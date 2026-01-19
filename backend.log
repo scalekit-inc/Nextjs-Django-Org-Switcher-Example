@@ -1,0 +1,193 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Generated auth URL with state: eYFjfWllWD...
+Using prompt: select_account
+[19/Jan/2026 03:47:48] "POST /api/auth/url HTTP/1.1" 200 357
+Callback state: eYFjfWllWD...
+Stored state: eYFjfWllWD...
+Callback state: eYFjfWllWD...
+Stored state: eYFjfWllWD...
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NDc3MiwiaWF0IjoxNzY4Nzk0NDcyLCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDM0MzYxODYxMDE5MCIsIm5iZiI6MTc2ODc5NDQ3Miwib2lkIjoib3JnXzkyNDU3NTUxMTE0Nzk5MTA4IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIkRlbGV0ZUNvbnRhY3QiLCJSZWFkQ29udGFjdCIsIlVwZGF0ZUNvbnRhY3QiLCJzZXR0aW5nczp3cml0ZSJdLCJyb2xlcyI6WyJhZG1pbiJdLCJzaWQiOiJzZXNfMTA4NTkzNzUwMzkyOTY0MTEwIiwic3ViIjoidXNyXzkyNDU3NTUxMTE0ODY0NjQ0IiwieG9pZCI6IiJ9.eySQBeFGtHSG1dteBCcsoAqhoSyHm0Bt4A5PQKCfJrU-uSj0JhW8Sq6UazATKzgPv5xNAxCtb2Q3u55HFFMIgiq0TNvnB8-YgbrKlPIipeBiIW8Lu-iLE1FF7z54cKBGDSafBL6dY8TyZj0WTwuQ6miMhw2wFzXx7FAGYCJ0UJsXuPg3L6V4Ssm_GB25XpMxNGPWTgUF4pAaiJkqLhIu87zmqmwrPR_buZOKEYlvusNtTlG2IIbuR5yolGP9t5sKQZUXykeclOD3VACUXLQSoIXkfLKwhsYp1EKtdmESA9rkr_pecm77cN_TVZiUxL79xqag3Tl5yd9HxrVxcD4dOQ
+User hashirr_7@hotmail.com authenticated successfully
+[19/Jan/2026 03:47:53] "POST /api/auth/callback HTTP/1.1" 200 173
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NDc3MiwiaWF0IjoxNzY4Nzk0NDcyLCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDM0MzYxODYwOTQxMCIsIm5iZiI6MTc2ODc5NDQ3Miwib2lkIjoib3JnXzkyNDU3NTUxMTE0Nzk5MTA4IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIkRlbGV0ZUNvbnRhY3QiLCJSZWFkQ29udGFjdCIsIlVwZGF0ZUNvbnRhY3QiLCJzZXR0aW5nczp3cml0ZSJdLCJyb2xlcyI6WyJhZG1pbiJdLCJzaWQiOiJzZXNfMTA4NTkzNzUwMzkyOTY0MTEwIiwic3ViIjoidXNyXzkyNDU3NTUxMTE0ODY0NjQ0IiwieG9pZCI6IiJ9.W28ijTHp_wOsGM8Zt1eShYO4MSuZw22xIU39tuIQwP4wliS_6zFbGFFHsUrqN09El4buj02afiufG6FTdmcZgYz3PvgyfAGa5pMgKdursmlt7dTs1tO3V5G0iEB1i0UZpt0A-xNjgdrOmHjJB5XpgFVjxP0oahOr3ar2LX7BwP3mpvC6rkHBKG6mOsppT2WREjyPDjBepxLJjMwVLnOEe81IWUfMs9n9dtY7ZZIuUhEGiG8BL_4XzOzAZGWhmpQKArqOt4-XIJ2_4pEpigv7KNYVtjmT92Y4QHfLN6oK82-JGUOYwifNMdNQCIFNdTBkP2Zg6Fmmot2bQE_rwnBCgw
+User hashirr_7@hotmail.com authenticated successfully
+[19/Jan/2026 03:47:53] "POST /api/auth/callback HTTP/1.1" 200 173
+User details response: {'user': {'id': 'usr_92457551114864644', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-29T20:03:14.910Z', 'update_time': '2025-09-29T20:03:14.919552Z', 'email': 'hashirr_7@hotmail.com', 'memberships': [{'organization_id': 'org_92457551114799108', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'Testing Company', 'metadata': {}, 'display_name': 'Testing Company', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}, {'organization_id': 'org_98613050965232130', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'Hashirr Company LLC', 'metadata': {}, 'display_name': 'Hashirr Company LLC', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}], 'user_profile': {'id': 'usp_92457551131576324', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Hashirr Lukmahn', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': []}, 'metadata': {}, 'last_login_time': '2026-01-19T03:41:59.170Z'}}
+Found 3 organization memberships for user usr_92457551114864644
+Final organizations list: [{'id': 'org_92457551114799108', 'display_name': 'Testing Company'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}, {'id': 'org_98613050965232130', 'display_name': 'Hashirr Company LLC'}]
+Current org ID from session: None
+Organizations returned: ['org_92457551114799108', 'org_96684973372736515', 'org_98613050965232130']
+Org org_92457551114799108 is_current: False
+Org org_96684973372736515 is_current: False
+Org org_98613050965232130 is_current: False
+[19/Jan/2026 03:47:55] "GET /api/auth/user HTTP/1.1" 200 437
+User details response: {'user': {'id': 'usr_92457551114864644', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-29T20:03:14.910Z', 'update_time': '2025-09-29T20:03:14.919552Z', 'email': 'hashirr_7@hotmail.com', 'memberships': [{'organization_id': 'org_92457551114799108', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'Testing Company', 'metadata': {}, 'display_name': 'Testing Company', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}, {'organization_id': 'org_98613050965232130', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'Hashirr Company LLC', 'metadata': {}, 'display_name': 'Hashirr Company LLC', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}], 'user_profile': {'id': 'usp_92457551131576324', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Hashirr Lukmahn', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': []}, 'metadata': {}, 'last_login_time': '2026-01-19T03:41:59.170Z'}}
+Found 3 organization memberships for user usr_92457551114864644
+Final organizations list: [{'id': 'org_92457551114799108', 'display_name': 'Testing Company'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}, {'id': 'org_98613050965232130', 'display_name': 'Hashirr Company LLC'}]
+Current org ID from session: None
+Organizations returned: ['org_92457551114799108', 'org_96684973372736515', 'org_98613050965232130']
+Org org_92457551114799108 is_current: False
+Org org_96684973372736515 is_current: False
+Org org_98613050965232130 is_current: False
+[19/Jan/2026 03:47:57] "GET /api/auth/user HTTP/1.1" 200 437
+Switching to organization: org_96684973372736515
+[19/Jan/2026 03:48:00] "POST /api/auth/switch-org HTTP/1.1" 200 395
+Callback state: p_ngdZPyzA...
+Stored state: p_ngdZPyzA...
+Callback state: p_ngdZPyzA...
+Stored state: p_ngdZPyzA...
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NDc4MSwiaWF0IjoxNzY4Nzk0NDgxLCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDM1NzkxMjc5NzQ0MiIsIm5iZiI6MTc2ODc5NDQ4MSwib2lkIjoib3JnXzk2Njg0OTczMzcyNzM2NTE1IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIlJlYWRDb250YWN0Il0sInJvbGVzIjpbIm1lbWJlciJdLCJzaWQiOiJzZXNfMTA4NTkzNzUwMzkyOTY0MTEwIiwic3ViIjoidXNyXzkyNDU3NTUxMTE0ODY0NjQ0IiwieG9pZCI6IndzcGFjZV85NjY4NDk3MzM3MjczNjUxNSJ9.JkcswMuenugJzOU-MqrcPJdxPjEN4-p5WbwU_g8P7SrB-BIDL0C0KYBwG5tH835sVVp8S48gMBei1QjZCWF7EkI1lsBCz3zYzqO4s1LE6XeNbGu6cjDVILXTfvbdSTedJuxK4GrZG4rSrj_291Qx-Lqqwg2Ci8fkvY5oGq0uSdkcq_UYWXkB6mID3vZGaQ2lT3RR1aCgL6P1URwOlWl1fTan0NgXz3KV-B2168DE3zKHHjiyBUzuLMhYHfVusuwhsNpLUetrKYMLh9893_3Lp4B80RHJhAoTxPGw3Dv75AlLfSUvDeoq_4y47OICZoOPHnjWo6aaLrvjonInkkVNuQ
+User hashirr_7@hotmail.com authenticated successfully
+[19/Jan/2026 03:48:01] "POST /api/auth/callback HTTP/1.1" 200 173
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NDc4MSwiaWF0IjoxNzY4Nzk0NDgxLCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDM1NzkxMjkyODUxNCIsIm5iZiI6MTc2ODc5NDQ4MSwib2lkIjoib3JnXzk2Njg0OTczMzcyNzM2NTE1IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIlJlYWRDb250YWN0Il0sInJvbGVzIjpbIm1lbWJlciJdLCJzaWQiOiJzZXNfMTA4NTkzNzUwMzkyOTY0MTEwIiwic3ViIjoidXNyXzkyNDU3NTUxMTE0ODY0NjQ0IiwieG9pZCI6IndzcGFjZV85NjY4NDk3MzM3MjczNjUxNSJ9.AC0XYn9VSe8CQlXVWT59K_QWnMdWak1e77CmMinpJ1jMXBDQwtChSl8-cqLYD4Ustgm3iwxTemn0gn5Pisr1a6sN0mjhDch5N9U-3rmhu3XVNy1we2YRVuG_retNfTrs7WUOdvQoynhCzIEqz4BnpP2fiT5nbADdpqfNh3XD2O7cdQHP227lUmuNhzr9HBxooKcTmspVKrc4_39t5jZyWqJI3slJrfpOvA7uDLLpn2v5R8u-aTOwkDNaxQm0GRpo5Uwy_RrxY0FoEG-Jx9Bf3cFRrqu4W8Q8_k51nRkIUF6iJunJmtXKmChLOOYE41NhozyO8xYLiAnC4g7q4dPqsw
+User hashirr_7@hotmail.com authenticated successfully
+[19/Jan/2026 03:48:01] "POST /api/auth/callback HTTP/1.1" 200 173
+User details response: {'user': {'id': 'usr_92457551114864644', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-29T20:03:14.910Z', 'update_time': '2025-09-29T20:03:14.919552Z', 'email': 'hashirr_7@hotmail.com', 'memberships': [{'organization_id': 'org_92457551114799108', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'Testing Company', 'metadata': {}, 'display_name': 'Testing Company', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}, {'organization_id': 'org_98613050965232130', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'Hashirr Company LLC', 'metadata': {}, 'display_name': 'Hashirr Company LLC', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}], 'user_profile': {'id': 'usp_92457551131576324', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Hashirr Lukmahn', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': []}, 'metadata': {}, 'last_login_time': '2026-01-19T03:41:59.170Z'}}
+Found 3 organization memberships for user usr_92457551114864644
+Final organizations list: [{'id': 'org_92457551114799108', 'display_name': 'Testing Company'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}, {'id': 'org_98613050965232130', 'display_name': 'Hashirr Company LLC'}]
+Current org ID from session: None
+Organizations returned: ['org_92457551114799108', 'org_96684973372736515', 'org_98613050965232130']
+Org org_92457551114799108 is_current: False
+Org org_96684973372736515 is_current: False
+Org org_98613050965232130 is_current: False
+[19/Jan/2026 03:48:02] "GET /api/auth/user HTTP/1.1" 200 437
+User details response: {'user': {'id': 'usr_92457551114864644', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-29T20:03:14.910Z', 'update_time': '2025-09-29T20:03:14.919552Z', 'email': 'hashirr_7@hotmail.com', 'memberships': [{'organization_id': 'org_92457551114799108', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'Testing Company', 'metadata': {}, 'display_name': 'Testing Company', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}, {'organization_id': 'org_98613050965232130', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'Hashirr Company LLC', 'metadata': {}, 'display_name': 'Hashirr Company LLC', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}], 'user_profile': {'id': 'usp_92457551131576324', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Hashirr Lukmahn', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': []}, 'metadata': {}, 'last_login_time': '2026-01-19T03:41:59.170Z'}}
+Found 3 organization memberships for user usr_92457551114864644
+Final organizations list: [{'id': 'org_92457551114799108', 'display_name': 'Testing Company'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}, {'id': 'org_98613050965232130', 'display_name': 'Hashirr Company LLC'}]
+Current org ID from session: None
+Organizations returned: ['org_92457551114799108', 'org_96684973372736515', 'org_98613050965232130']
+Org org_92457551114799108 is_current: False
+Org org_96684973372736515 is_current: False
+Org org_98613050965232130 is_current: False
+[19/Jan/2026 03:48:03] "GET /api/auth/user HTTP/1.1" 200 437
+Switching to organization: org_96684973372736515
+[19/Jan/2026 03:48:09] "POST /api/auth/switch-org HTTP/1.1" 200 395
+Callback state: sZNAxFX70o...
+Stored state: sZNAxFX70o...
+Callback state: sZNAxFX70o...
+Stored state: sZNAxFX70o...
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NDc5MCwiaWF0IjoxNzY4Nzk0NDkwLCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDM3MzY2NjYwMzUyMiIsIm5iZiI6MTc2ODc5NDQ5MCwib2lkIjoib3JnXzk2Njg0OTczMzcyNzM2NTE1IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIlJlYWRDb250YWN0Il0sInJvbGVzIjpbIm1lbWJlciJdLCJzaWQiOiJzZXNfMTA4NTkzNzUwMzkyOTY0MTEwIiwic3ViIjoidXNyXzkyNDU3NTUxMTE0ODY0NjQ0IiwieG9pZCI6IndzcGFjZV85NjY4NDk3MzM3MjczNjUxNSJ9.bWUJ10WPMNlCZl40LZrstE3PbIP5x5U9-k7EANx56sTUyYn_zAQeNQpZ_76K4QJnwXfK9mOLVXiNzkVYy6dlV1v_X0u1wX-upkhW3aAZJj09h1fKcOOq3UwWE1nMbFLNvHWbGBT9TomLVCE-3cKl14cuYUWXbAkiQyJer2_lLZ8n83wx49A1C_En8hfsxilV-OLALDLg-VjQuIK3C--2dULgpfNlBW547k_WUqNEE3mY0-lYZfN1-Mb75waZJAscAydQT3mNO9C6iL9WdgK_6i88xmVrPBnBQp8fuKMsR6Djgg0vAfKvJKAKkOPBue18_iLjuQiopb8hUz-VabXlWA
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NDc5MCwiaWF0IjoxNzY4Nzk0NDkwLCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDM3MzY2NjYwMzI2NiIsIm5iZiI6MTc2ODc5NDQ5MCwib2lkIjoib3JnXzk2Njg0OTczMzcyNzM2NTE1IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIlJlYWRDb250YWN0Il0sInJvbGVzIjpbIm1lbWJlciJdLCJzaWQiOiJzZXNfMTA4NTkzNzUwMzkyOTY0MTEwIiwic3ViIjoidXNyXzkyNDU3NTUxMTE0ODY0NjQ0IiwieG9pZCI6IndzcGFjZV85NjY4NDk3MzM3MjczNjUxNSJ9.vqOdli9Oope-eB0nOnsHE5G6auToiJAGhq0s10KkNJ4VLVRUmvUCsVZx6j_76eT1wVLybYzdistB7r4bHtqSJK3qvLDSbFQPXitMdRvrgI5HYdOCNANzNYhqORW4_awSzW5V9XfCfgqcjiUij1GN10ODm7kVP3Ymil1_bDQ7GyzZhVKE7sezO9rfM_bectCEt6WkEcXEaCCZu6T0jVqo2YOLdDXgCk9t_fip8P0qw1sndOXLMJM8CZVN_GwDogWhvEEaIY3MIJ1014S5UOFyUR7dn6VLKudirnhc3VPjHTEQWkJW_pczVlFu9nDqiTQAg0aP0h2jz4IKYXeIFvNO2w
+User hashirr_7@hotmail.com authenticated successfully
+User hashirr_7@hotmail.com authenticated successfully
+[19/Jan/2026 03:48:11] "POST /api/auth/callback HTTP/1.1" 200 173
+[19/Jan/2026 03:48:11] "POST /api/auth/callback HTTP/1.1" 200 173
+User details response: {'user': {'id': 'usr_92457551114864644', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-29T20:03:14.910Z', 'update_time': '2025-09-29T20:03:14.919552Z', 'email': 'hashirr_7@hotmail.com', 'memberships': [{'organization_id': 'org_92457551114799108', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'Testing Company', 'metadata': {}, 'display_name': 'Testing Company', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}, {'organization_id': 'org_98613050965232130', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'Hashirr Company LLC', 'metadata': {}, 'display_name': 'Hashirr Company LLC', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}], 'user_profile': {'id': 'usp_92457551131576324', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Hashirr Lukmahn', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': []}, 'metadata': {}, 'last_login_time': '2026-01-19T03:41:59.170Z'}}
+Found 3 organization memberships for user usr_92457551114864644
+Final organizations list: [{'id': 'org_92457551114799108', 'display_name': 'Testing Company'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}, {'id': 'org_98613050965232130', 'display_name': 'Hashirr Company LLC'}]
+Current org ID from session: None
+Organizations returned: ['org_92457551114799108', 'org_96684973372736515', 'org_98613050965232130']
+Org org_92457551114799108 is_current: False
+Org org_96684973372736515 is_current: False
+Org org_98613050965232130 is_current: False
+[19/Jan/2026 03:48:12] "GET /api/auth/user HTTP/1.1" 200 437
+User details response: {'user': {'id': 'usr_92457551114864644', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-29T20:03:14.910Z', 'update_time': '2025-09-29T20:03:14.919552Z', 'email': 'hashirr_7@hotmail.com', 'memberships': [{'organization_id': 'org_92457551114799108', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'Testing Company', 'metadata': {}, 'display_name': 'Testing Company', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}, {'organization_id': 'org_98613050965232130', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428349443', 'name': 'member', 'display_name': 'Member'}], 'name': 'Hashirr Company LLC', 'metadata': {}, 'display_name': 'Hashirr Company LLC', 'provisioning_method': 'direct_provision', 'permissions': ['CreateContact', 'ReadContact']}], 'user_profile': {'id': 'usp_92457551131576324', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Hashirr Lukmahn', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': []}, 'metadata': {}, 'last_login_time': '2026-01-19T03:41:59.170Z'}}
+Found 3 organization memberships for user usr_92457551114864644
+Final organizations list: [{'id': 'org_92457551114799108', 'display_name': 'Testing Company'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}, {'id': 'org_98613050965232130', 'display_name': 'Hashirr Company LLC'}]
+Current org ID from session: None
+Organizations returned: ['org_92457551114799108', 'org_96684973372736515', 'org_98613050965232130']
+Org org_92457551114799108 is_current: False
+Org org_96684973372736515 is_current: False
+Org org_98613050965232130 is_current: False
+[19/Jan/2026 03:48:13] "GET /api/auth/user HTTP/1.1" 200 437
+/Users/hashirrlukmahn/Desktop/Demos/LGM_Demo/org-switcher-app/backend/auth_app/views.py changed, reloading.
+/Users/hashirrlukmahn/Desktop/Demos/LGM_Demo/org-switcher-app/backend/auth_app/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 19, 2026 - 03:47:36
+Django version 4.2.27, using settings 'org_switcher.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+User logged out
+[19/Jan/2026 03:52:47] "POST /api/auth/logout HTTP/1.1" 200 1278
+Generated auth URL with state: jdDHEUVGfc...
+[19/Jan/2026 03:52:49] "POST /api/auth/url HTTP/1.1" 200 335
+Callback state: jdDHEUVGfc...
+Callback state: jdDHEUVGfc...
+Stored state: jdDHEUVGfc...
+Stored state: jdDHEUVGfc...
+Token exchange failed: 
+========================================
+Error Code: Bad Request
+GRPC: (INVALID_ARGUMENT: (3, 'invalid argument'))
+HTTP: (INTERNAL_SERVER_ERROR: 500)
+Error Details: {"error":"invalid_grant","error_description":"invalid code"}
+
+========================================
+
+Callback error: Failed to exchange code for tokens: 
+========================================
+Error Code: Bad Request
+GRPC: (INVALID_ARGUMENT: (3, 'invalid argument'))
+HTTP: (INTERNAL_SERVER_ERROR: 500)
+Error Details: {"error":"invalid_grant","error_description":"invalid code"}
+
+========================================
+
+Internal Server Error: /api/auth/callback
+Internal Server Error: /api/auth/callback
+[19/Jan/2026 03:53:24] "POST /api/auth/callback HTTP/1.1" 500 357
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NTEwNCwiaWF0IjoxNzY4Nzk0ODA0LCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDkwMDQwNDA3NzA1OCIsIm5iZiI6MTc2ODc5NDgwNCwib2lkIjoib3JnXzkyMjM2MTc0MTIyMjg5MTU2IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIkRlbGV0ZUNvbnRhY3QiLCJSZWFkQ29udGFjdCIsIlVwZGF0ZUNvbnRhY3QiLCJzZXR0aW5nczp3cml0ZSJdLCJyb2xlcyI6WyJhZG1pbiJdLCJzaWQiOiJzZXNfMTA4NTk0ODk4NjkyNzM2MDE0Iiwic3ViIjoidXNyXzkyMjM2MTc0MTIyMzU0NjkyIiwieG9pZCI6IndzcGFjZV85MjIzNjE3NDEyMjI4OTE1NiJ9.yw_i2bpb8DmVdFaF65w2StTEQ5YIzXk0_m6vBg6BrruDPOYIPm22RuqH-_BvRCULqUSaTBNc45Q1WXSsRdV0tz6-BHU3IpGQ9_y8qgGXjHO9bzQXehNrX-ZQw4GyacWwIhqJAExz-dCXFGJ_-X4MNNxZMY48XCus4wkkLJtvf_x5DQADunFxY4Nxi2vlr2KjWtFd_O5--bYJDitpBnNCZuB0rWfpv7jodydx1IJf-Ky-EDd7BXfl6UJvSWrOI78CqxuE9SQevv597FC8wiFKLrCVquUa5dNn65jtPemB2si7bIlhc7NrN20DHRn9vNleXJ4tkNA4tRs_Wl6qOTyAKA
+User lehashbrown07@gmail.com authenticated successfully
+[19/Jan/2026 03:53:26] "POST /api/auth/callback HTTP/1.1" 200 190
+User details response: {'user': {'id': 'usr_92236174122354692', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-28T07:24:03.940Z', 'update_time': '2025-09-28T07:24:03.949976Z', 'email': 'lehashbrown07@gmail.com', 'memberships': [{'organization_id': 'org_92236174122289156', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': '99th Precinct', 'metadata': {}, 'display_name': '99th Precinct', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'SSO', 'permissions': ['']}], 'user_profile': {'id': 'usp_92236174139066372', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Jack Donger', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': [{'connection_id': 'conn_91578098411113475', 'connection_type': 'OAUTH', 'connection_provider': 'GOOGLE', 'connection_user_id': '103362071433575890667', 'is_social': True, 'last_login_time': '2026-01-19T03:53:23.607500Z', 'created_time': '2025-10-17T23:28:17.740Z', 'last_synced_time': '2025-10-17T23:28:17.740020Z'}]}, 'metadata': {}, 'last_login_time': '2026-01-19T03:53:23.610Z'}}
+Found 2 organization memberships for user usr_92236174122354692
+Final organizations list: [{'id': 'org_92236174122289156', 'display_name': '99th Precinct'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}]
+Current org ID from session: org_92236174122289156
+Organizations returned: ['org_92236174122289156', 'org_96684973372736515']
+Org org_92236174122289156 is_current: True
+Org org_96684973372736515 is_current: False
+[19/Jan/2026 03:53:28] "GET /api/auth/user HTTP/1.1" 200 358
+User details response: {'user': {'id': 'usr_92236174122354692', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-28T07:24:03.940Z', 'update_time': '2025-09-28T07:24:03.949976Z', 'email': 'lehashbrown07@gmail.com', 'memberships': [{'organization_id': 'org_92236174122289156', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': '99th Precinct', 'metadata': {}, 'display_name': '99th Precinct', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'SSO', 'permissions': ['']}], 'user_profile': {'id': 'usp_92236174139066372', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Jack Donger', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': [{'connection_id': 'conn_91578098411113475', 'connection_type': 'OAUTH', 'connection_provider': 'GOOGLE', 'connection_user_id': '103362071433575890667', 'is_social': True, 'last_login_time': '2026-01-19T03:53:23.607500Z', 'created_time': '2025-10-17T23:28:17.740Z', 'last_synced_time': '2025-10-17T23:28:17.740020Z'}]}, 'metadata': {}, 'last_login_time': '2026-01-19T03:53:23.610Z'}}
+Found 2 organization memberships for user usr_92236174122354692
+Final organizations list: [{'id': 'org_92236174122289156', 'display_name': '99th Precinct'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}]
+Current org ID from session: org_92236174122289156
+Organizations returned: ['org_92236174122289156', 'org_96684973372736515']
+Org org_92236174122289156 is_current: True
+Org org_96684973372736515 is_current: False
+[19/Jan/2026 03:53:29] "GET /api/auth/user HTTP/1.1" 200 358
+Switching to organization: org_96684973372736515
+[19/Jan/2026 03:53:33] "POST /api/auth/switch-org HTTP/1.1" 200 395
+Callback state: tzUI_WOHox...
+Stored state: tzUI_WOHox...
+Callback state: tzUI_WOHox...
+Stored state: tzUI_WOHox...
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NTExNCwiaWF0IjoxNzY4Nzk0ODE0LCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDkxNzQ4MzI4MzQ3MCIsIm5iZiI6MTc2ODc5NDgxNCwib2lkIjoib3JnXzk2Njg0OTczMzcyNzM2NTE1IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIkRlbGV0ZUNvbnRhY3QiLCJSZWFkQ29udGFjdCIsIlVwZGF0ZUNvbnRhY3QiLCJzZXR0aW5nczp3cml0ZSJdLCJyb2xlcyI6WyJhZG1pbiJdLCJzaWQiOiJzZXNfMTA4NTk0ODk4NjkyNzM2MDE0Iiwic3ViIjoidXNyXzkyMjM2MTc0MTIyMzU0NjkyIiwieG9pZCI6IndzcGFjZV85NjY4NDk3MzM3MjczNjUxNSJ9.ST7PxFqVjyKMPng5T8zGDDFB2b-psAtPGCaAKAxyYeNZQqCXoubT51qdgE9iRzx3kPbz9LlK0ev4l0pnHfWrbIFVp6_0uhZC6F6yqhQjYNAGnZxGUta4pAbsbctF30MmpHVTBgK1aP1pXzZlopFbUEwhqoquil8kIdVjhteKaJjQ_b-JCg9pkqWArVa3NpIW_9nWu19Uc2sq-qXCTDEF-r5eF_Xge1aSqvx1AOZltuRdloek_3K1pemUkw6fkXlqAu5kCgdHgbVLXkukOfDv4ix5yL7uU1vy4FQT7nKugmhIqdVzvNd6bIOjPo4z1NJZjSrc-ILy07EZlzuOimhOGQ
+User lehashbrown07@gmail.com authenticated successfully
+[19/Jan/2026 03:53:35] "POST /api/auth/callback HTTP/1.1" 200 190
+Failed to get user organizations: 400 Client Error: Bad Request for url: https://personal-afcvts3saagag.scalekit.dev/api/v1/users/eyJhbGciOiJSUzI1NiIsImtpZCI6InNua185MTU3ODA5Nzk1ODEyODY0MyIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic2tjXzkxNTc4MDk4MzQ0MDA0NjExIl0sImNsaWVudF9pZCI6InNrY185MTU3ODA5ODM0NDAwNDYxMSIsImV4cCI6MTc2ODc5NTExNCwiaWF0IjoxNzY4Nzk0ODE0LCJpc3MiOiJodHRwczovL3BlcnNvbmFsLWFmY3Z0czNzYWFnYWcuc2NhbGVraXQuZGV2IiwianRpIjoidGtuXzEwODU5NDkxNzQ2NjUwNTQ3NCIsIm5iZiI6MTc2ODc5NDgxNCwib2lkIjoib3JnXzk2Njg0OTczMzcyNzM2NTE1IiwicGVybWlzc2lvbnMiOlsiQ3JlYXRlQ29udGFjdCIsIkRlbGV0ZUNvbnRhY3QiLCJSZWFkQ29udGFjdCIsIlVwZGF0ZUNvbnRhY3QiLCJzZXR0aW5nczp3cml0ZSJdLCJyb2xlcyI6WyJhZG1pbiJdLCJzaWQiOiJzZXNfMTA4NTk0ODk4NjkyNzM2MDE0Iiwic3ViIjoidXNyXzkyMjM2MTc0MTIyMzU0NjkyIiwieG9pZCI6IndzcGFjZV85NjY4NDk3MzM3MjczNjUxNSJ9.lsProRXA_awqXBHc2fEGrfe1x6aJh3gsdZ3PFQdzEH45eOrfmswQcmJ8mfDZdGg6HIGvAtJ3EYbsRzse-qpU21xzGVcGoUEPeBWRjWxB2EDG7eil83R0vITxcwwbqKTuY4luFC1Ks0jRc9-9IJ-2ZztUfNgfXk3LW8HWAlu1NQwzBeXTWN9Jxv-w5VKhT5osplYBAAIyV3r9GqRbK-eG_71lfm7S8KH4zvCkUmfd4lUIdfFuTmylCDACfFBNzvSYJeShyAk2vRE8fVISwP4fpJFpgXAKty9oOoqflpyAFEfQmld_gvMc39MYjv60tXrgP_bwtNIWwU_yyh_77wdgRg
+User lehashbrown07@gmail.com authenticated successfully
+[19/Jan/2026 03:53:35] "POST /api/auth/callback HTTP/1.1" 200 190
+User details response: {'user': {'id': 'usr_92236174122354692', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-28T07:24:03.940Z', 'update_time': '2025-09-28T07:24:03.949976Z', 'email': 'lehashbrown07@gmail.com', 'memberships': [{'organization_id': 'org_92236174122289156', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': '99th Precinct', 'metadata': {}, 'display_name': '99th Precinct', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'SSO', 'permissions': ['']}], 'user_profile': {'id': 'usp_92236174139066372', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Jack Donger', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': [{'connection_id': 'conn_91578098411113475', 'connection_type': 'OAUTH', 'connection_provider': 'GOOGLE', 'connection_user_id': '103362071433575890667', 'is_social': True, 'last_login_time': '2026-01-19T03:53:23.607500Z', 'created_time': '2025-10-17T23:28:17.740Z', 'last_synced_time': '2025-10-17T23:28:17.740020Z'}]}, 'metadata': {}, 'last_login_time': '2026-01-19T03:53:23.610Z'}}
+Found 2 organization memberships for user usr_92236174122354692
+Final organizations list: [{'id': 'org_92236174122289156', 'display_name': '99th Precinct'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}]
+Current org ID from session: org_96684973372736515
+Organizations returned: ['org_92236174122289156', 'org_96684973372736515']
+Org org_92236174122289156 is_current: False
+Org org_96684973372736515 is_current: True
+[19/Jan/2026 03:53:36] "GET /api/auth/user HTTP/1.1" 200 358
+User details response: {'user': {'id': 'usr_92236174122354692', 'environment_id': 'env_91578097756802051', 'create_time': '2025-09-28T07:24:03.940Z', 'update_time': '2025-09-28T07:24:03.949976Z', 'email': 'lehashbrown07@gmail.com', 'memberships': [{'organization_id': 'org_92236174122289156', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': '99th Precinct', 'metadata': {}, 'display_name': '99th Precinct', 'permissions': ['']}, {'organization_id': 'org_96684973372736515', 'membership_status': 'ACTIVE', 'roles': [{'id': 'role_91578098428283907', 'name': 'admin', 'display_name': 'Admin'}], 'name': 'USPS', 'metadata': {}, 'display_name': 'USPS', 'provisioning_method': 'SSO', 'permissions': ['']}], 'user_profile': {'id': 'usp_92236174139066372', 'given_name': 'Hashirr', 'family_name': 'Lukmahn', 'name': 'Jack Donger', 'locale': '', 'email_verified': True, 'phone_number': '', 'metadata': {}, 'custom_attributes': {}, 'first_name': 'Hashirr', 'last_name': 'Lukmahn', 'preferred_username': '', 'phone_number_verified': False, 'picture': '', 'groups': [], 'gender': '', 'external_identities': [{'connection_id': 'conn_91578098411113475', 'connection_type': 'OAUTH', 'connection_provider': 'GOOGLE', 'connection_user_id': '103362071433575890667', 'is_social': True, 'last_login_time': '2026-01-19T03:53:23.607500Z', 'created_time': '2025-10-17T23:28:17.740Z', 'last_synced_time': '2025-10-17T23:28:17.740020Z'}]}, 'metadata': {}, 'last_login_time': '2026-01-19T03:53:23.610Z'}}
+Found 2 organization memberships for user usr_92236174122354692
+Final organizations list: [{'id': 'org_92236174122289156', 'display_name': '99th Precinct'}, {'id': 'org_96684973372736515', 'display_name': 'USPS'}]
+Current org ID from session: org_96684973372736515
+Organizations returned: ['org_92236174122289156', 'org_96684973372736515']
+Org org_92236174122289156 is_current: False
+Org org_96684973372736515 is_current: True
+[19/Jan/2026 03:53:37] "GET /api/auth/user HTTP/1.1" 200 358
+/Users/hashirrlukmahn/Desktop/Demos/LGM_Demo/org-switcher-app/backend/auth_app/views.py changed, reloading.
+/Users/hashirrlukmahn/Desktop/Demos/LGM_Demo/org-switcher-app/backend/auth_app/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 19, 2026 - 03:52:45
+Django version 4.2.27, using settings 'org_switcher.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
