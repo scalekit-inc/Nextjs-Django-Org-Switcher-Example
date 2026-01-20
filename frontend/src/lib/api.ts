@@ -144,3 +144,112 @@ export async function logout(): Promise<LogoutResponse> {
 
   return response.json();
 }
+
+// ============================================
+// Connector API (Agent Auth)
+// ============================================
+
+export interface Connector {
+  connector: string;
+  display_name: string;
+  description: string;
+  connected: boolean;
+  status: string;
+  account_id?: string;
+  error?: string;
+}
+
+export interface ConnectorsListResponse {
+  connectors: Connector[];
+}
+
+export interface ConnectorConnectResponse {
+  auth_url: string;
+  connector: string;
+}
+
+export interface ConnectorDisconnectResponse {
+  success: boolean;
+  connector: string;
+  message: string;
+}
+
+/**
+ * Get status of all connectors for the current user
+ */
+export async function getConnectors(): Promise<ConnectorsListResponse> {
+  const response = await fetch(`${API_URL}/connectors`, {
+    method: 'GET',
+    credentials: 'include',
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.error || 'Failed to get connectors');
+  }
+
+  return response.json();
+}
+
+/**
+ * Generate authorization link to connect a service
+ */
+export async function connectConnector(
+  connector: string,
+  redirectUrl?: string
+): Promise<ConnectorConnectResponse> {
+  const response = await fetch(`${API_URL}/connectors/connect`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({
+      connector,
+      redirect_url: redirectUrl,
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.error || 'Failed to connect');
+  }
+
+  return response.json();
+}
+
+/**
+ * Get status of a specific connector
+ */
+export async function getConnectorStatus(connector: string): Promise<Connector> {
+  const response = await fetch(`${API_URL}/connectors/${connector}/status`, {
+    method: 'GET',
+    credentials: 'include',
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.error || 'Failed to get connector status');
+  }
+
+  return response.json();
+}
+
+/**
+ * Disconnect a connected service
+ */
+export async function disconnectConnector(
+  connector: string
+): Promise<ConnectorDisconnectResponse> {
+  const response = await fetch(`${API_URL}/connectors/${connector}/disconnect`, {
+    method: 'POST',
+    credentials: 'include',
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.error || 'Failed to disconnect');
+  }
+
+  return response.json();
+}

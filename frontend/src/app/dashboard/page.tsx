@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getUserInfo, logout, User, Organization } from '@/lib/api';
 import CustomOrgSwitcher from '@/components/CustomOrgSwitcher';
+import ConnectorsPanel from '@/components/ConnectorsPanel';
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -172,6 +173,9 @@ export default function DashboardPage() {
               )}
             </div>
           </div>
+
+          {/* Connected Services Card */}
+          <ConnectorsPanel />
 
           {/* Organizations Card */}
           <div className="bg-white rounded-lg shadow-lg p-6">

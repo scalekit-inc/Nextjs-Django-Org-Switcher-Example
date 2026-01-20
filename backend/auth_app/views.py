@@ -368,3 +368,189 @@ def health_check_view(request):
         {"status": "ok"}
     """
     return JsonResponse({'status': 'ok'})
+
+
+# ============================================
+# Connector API Endpoints (Agent Auth)
+# ============================================
+
+@api_login_required
+@require_http_methods(["GET"])
+def connectors_list_view(request):
+    """
+    Get status of all connectors for the current user.
+
+    GET /api/connectors
+
+    Returns:
+        {
+            "connectors": [
+                {
+                    "connector": "github",
+                    "display_name": "GitHub",
+                    "description": "...",
+                    "connected": true,
+                    "status": "ACTIVE"
+                },
+                ...
+            ]
+        }
+    """
+    try:
+        from auth_app.connector_service import get_connector_service
+
+        user_data = request.session.get('scalekit_user', {})
+        user_identifier = user_data.get('email') or user_data.get('sub')
+
+        if not user_identifier:
+            return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+        service = get_connector_service()
+        statuses = service.get_all_connection_statuses(user_identifier)
+
+        return JsonResponse({
+            'connectors': statuses
+        })
+
+    except Exception as e:
+        logger.error(f"Error getting connector statuses: {e}")
+        return JsonResponse({
+            'error': f'Failed to get connector statuses: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@api_login_required
+@require_http_methods(["POST"])
+def connector_connect_view(request):
+    """
+    Generate authorization link to connect a service.
+
+    POST /api/connectors/connect
+    Body: {
+        "connector": "github" | "slack" | "google_ads",
+        "redirect_url": "http://localhost:3000/dashboard" (optional)
+    }
+
+    Returns:
+        {
+            "auth_url": "https://..."
+        }
+    """
+    try:
+        import json
+        from auth_app.connector_service import get_connector_service
+
+        body = json.loads(request.body)
+        connector_name = body.get('connector')
+        redirect_url = body.get('redirect_url')
+
+        if not connector_name:
+            return JsonResponse({'error': 'connector is required'}, status=400)
+
+        user_data = request.session.get('scalekit_user', {})
+        user_identifier = user_data.get('email') or user_data.get('sub')
+
+        if not user_identifier:
+            return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+        service = get_connector_service()
+        auth_url = service.get_authorization_link(
+            connector_name=connector_name,
+            user_identifier=user_identifier,
+            redirect_url=redirect_url
+        )
+
+        logger.info(f"Generated {connector_name} authorization link for user {user_identifier}")
+
+        return JsonResponse({
+            'auth_url': auth_url,
+            'connector': connector_name
+        })
+
+    except ValueError as e:
+        return JsonResponse({'error': str(e)}, status=400)
+    except Exception as e:
+        logger.error(f"Error generating connector auth link: {e}")
+        return JsonResponse({
+            'error': f'Failed to generate authorization link: {str(e)}'
+        }, status=500)
+
+
+@api_login_required
+@require_http_methods(["GET"])
+def connector_status_view(request, connector_name):
+    """
+    Get status of a specific connector for the current user.
+
+    GET /api/connectors/<connector_name>/status
+
+    Returns:
+        {
+            "connector": "github",
+            "display_name": "GitHub",
+            "connected": true,
+            "status": "ACTIVE"
+        }
+    """
+    try:
+        from auth_app.connector_service import get_connector_service
+
+        user_data = request.session.get('scalekit_user', {})
+        user_identifier = user_data.get('email') or user_data.get('sub')
+
+        if not user_identifier:
+            return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+        service = get_connector_service()
+        status = service.get_connection_status(connector_name, user_identifier)
+
+        return JsonResponse(status)
+
+    except ValueError as e:
+        return JsonResponse({'error': str(e)}, status=400)
+    except Exception as e:
+        logger.error(f"Error getting connector status: {e}")
+        return JsonResponse({
+            'error': f'Failed to get connector status: {str(e)}'
+        }, status=500)
+
+
+@csrf_exempt
+@api_login_required
+@require_http_methods(["POST"])
+def connector_disconnect_view(request, connector_name):
+    """
+    Disconnect a connected service.
+
+    POST /api/connectors/<connector_name>/disconnect
+
+    Returns:
+        {
+            "success": true,
+            "message": "GitHub disconnected successfully"
+        }
+    """
+    try:
+        from auth_app.connector_service import get_connector_service
+
+        user_data = request.session.get('scalekit_user', {})
+        user_identifier = user_data.get('email') or user_data.get('sub')
+
+        if not user_identifier:
+            return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+        service = get_connector_service()
+        result = service.disconnect_account(connector_name, user_identifier)
+
+        logger.info(f"Disconnected {connector_name} for user {user_identifier}")
+
+        return JsonResponse(result)
+
+    except ValueError as e:
+        return JsonResponse({'error': str(e)}, status=400)
+    except Exception as e:
+        logger.error(f"Error disconnecting connector: {e}")
+        return JsonResponse({
+            'error': f'Failed to disconnect: {str(e)}'
+        }, status=500)

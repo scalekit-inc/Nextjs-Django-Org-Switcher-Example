@@ -7,6 +7,7 @@ A full-stack application demonstrating Scalekit's organization switching capabil
 - **Scalekit's Built-in Organization Switcher**: Uses `prompt: 'select_account'` to show Scalekit's native organization selection UI
 - **Custom Organization Switcher**: Custom dropdown component for switching between organizations
 - **Current Organization Display**: Visual indicators showing which organization the user is currently in
+- **Agent Auth Connectors**: Connect external services (GitHub, Slack, Google Ads) using Scalekit's Agent Auth
 - **Django REST API Backend**: Session-based authentication with Scalekit SDK
 - **Next.js 14 Frontend**: Modern React with TypeScript and Tailwind CSS
 
@@ -150,6 +151,199 @@ auth_url = client.get_authorization_url(
 )
 ```
 
+## Agent Auth (Connected Services)
+
+The dashboard includes a **Connected Services** panel that allows users to connect their external accounts using Scalekit's Agent Auth feature.
+
+### Supported Connectors
+
+| Connector | Description |
+|-----------|-------------|
+| **GitHub** | Connect to manage repositories, issues, and pull requests |
+| **Slack** | Connect to send messages and manage channels |
+| **Google Ads** | Connect to manage advertising campaigns |
+
+### How It Works
+
+Agent Auth builds on top of the organization switcher authentication:
+
+1. User logs in via Scalekit (org switcher) and gets a session
+2. User visits the dashboard and sees the Connected Services panel
+3. User clicks "Connect" on any service (GitHub, Slack, Google Ads)
+4. Backend generates an OAuth authorization URL via Scalekit Agent Auth
+5. User completes OAuth with the external provider in a new tab
+6. Connection status updates to "Connected"
+
+### Key Points
+
+- **Requires authentication first**: User must be logged in via Scalekit before connecting services
+- **Tied to user, not organization**: Connected accounts persist across organization switches (tied to user's email)
+- **Secure token storage**: Scalekit handles OAuth tokens, refresh, and secure storage
+
+### Implementation Details
+
+The connector service uses Scalekit's Agent Actions API via `client.actions`:
+
+```python
+# Backend - connector_service.py
+from scalekit import ScalekitClient
+
+client = ScalekitClient(
+    env_url=settings.SCALEKIT_ENV_URL,
+    client_id=settings.SCALEKIT_CLIENT_ID,
+    client_secret=settings.SCALEKIT_CLIENT_SECRET,
+)
+
+# Get or create a connected account
+response = client.actions.get_or_create_connected_account(
+    connection_name="github-abc123",  # Must match name in Scalekit dashboard
+    identifier=user_email
+)
+
+# Generate authorization link for OAuth
+response = client.actions.get_authorization_link(
+    connection_name="github-abc123",
+    identifier=user_email,
+    redirect_url="http://localhost:3000/dashboard"
+)
+auth_url = response.link
+
+# Disconnect an account
+client.actions.delete_connected_account(
+    connection_name="github-abc123",
+    identifier=user_email
+)
+```
+
+### Connector Configuration
+
+**Important:** The `connection_name` must match exactly what you configured in your Scalekit dashboard. This is typically the connector name with a unique suffix (e.g., `github-WZZtcfBc`).
+
+Configure your connectors in `backend/auth_app/connector_service.py`:
+
+```python
+SUPPORTED_CONNECTORS = {
+    'github': {
+        'name': 'github-WZZtcfBc',  # Your Scalekit connection name
+        'display_name': 'GitHub',
+        'description': 'Connect to GitHub to manage repositories...',
+    },
+    'slack': {
+        'name': 'slack',  # Your Scalekit connection name
+        'display_name': 'Slack',
+        'description': 'Connect to Slack to send messages...',
+    },
+    'google_ads': {
+        'name': 'google_ads',  # Your Scalekit connection name
+        'display_name': 'Google Ads',
+        'description': 'Connect to Google Ads to manage campaigns...',
+    },
+}
+```
+
+### Setting Up Connectors in Scalekit
+
+#### GitHub Connector Setup
+
+**Step 1: Create a GitHub OAuth App**
+
+1. Go to [GitHub Developer Settings](https://github.com/settings/developers) (or for organizations: Settings > Developer settings > OAuth Apps)
+2. Click **New OAuth App** (or **Register a new application**)
+3. Fill in the application details:
+   - **Application name**: Your app name (e.g., "My App - GitHub Integration")
+   - **Homepage URL**: Your application's homepage (e.g., `http://localhost:3000`)
+   - **Authorization callback URL**: Get this from your Scalekit dashboard (see Step 2)
+4. Click **Register application**
+5. On the next page, you'll see your **Client ID**
+6. Click **Generate a new client secret** and copy the **Client Secret**
+
+> For detailed instructions, see: [Creating an OAuth App on GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
+
+**Step 2: Configure GitHub in Scalekit**
+
+1. Go to your [Scalekit Dashboard](https://app.scalekit.com)
+2. Navigate to **Agent Auth → Connections**
+3. Click **Create Connection** → Choose **GitHub** → Click **Create**
+4. Copy the **Redirect URI** shown in the Scalekit dashboard
+5. Go back to your GitHub OAuth App settings and paste this as the **Authorization callback URL**
+6. In Scalekit, paste the **Client ID** and **Client Secret** from GitHub
+7. Save the connection and note the **connection name** (e.g., `github-WZZtcfBc`)
+
+#### Google Ads Connector Setup
+
+**Step 1: Enable Google Ads API**
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com)
+2. Select or create a project
+3. Navigate to **APIs & Services → Library**
+4. Search for "Google Ads API" and click **Enable**
+
+**Step 2: Create OAuth Credentials**
+
+1. Go to **APIs & Services → Credentials**
+2. Click **Create credentials → OAuth client ID**
+3. If prompted, configure the OAuth consent screen first:
+   - Choose **External** (or Internal for Google Workspace)
+   - Fill in app name, user support email, and developer contact
+   - Add scopes as needed for Google Ads
+   - Add test users if in testing mode
+4. Back in Credentials, create OAuth client ID:
+   - **Application type**: Web application
+   - **Name**: Your app name (e.g., "My App - Google Ads")
+   - **Authorized redirect URIs**: Get this from your Scalekit dashboard (see Step 3)
+5. Click **Create** and copy the **Client ID** and **Client Secret**
+
+**Step 3: Configure Google Ads in Scalekit**
+
+1. Go to your [Scalekit Dashboard](https://app.scalekit.com)
+2. Navigate to **Agent Auth → Connections**
+3. Click **Create Connection** → Choose **Google Ads** → Click **Create**
+4. Copy the **Redirect URI** shown in the Scalekit dashboard
+5. Go back to Google Cloud Console and add this URI to **Authorized redirect URIs**
+6. In Scalekit, paste the **Client ID** and **Client Secret** from Google
+7. Save the connection and note the **connection name**
+
+> **Note:** This is a one-time setup - you do not create connections per user. The connection is shared, and each user authorizes their own account through the OAuth flow.
+
+#### Slack Connector Setup
+
+1. Go to [Slack API Apps](https://api.slack.com/apps)
+2. Click **Create New App** → **From scratch**
+3. Enter your app name and select a workspace
+4. Navigate to **OAuth & Permissions**
+5. Add the required scopes under **User Token Scopes**
+6. Copy the **Redirect URL** from your Scalekit dashboard and add it under **Redirect URLs**
+7. Copy the **Client ID** and **Client Secret** from Slack
+8. In Scalekit, create a Slack connection and paste the credentials
+
+### API Endpoints for Connectors
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/connectors` | GET | List all connectors with connection status |
+| `/api/connectors/connect` | POST | Get authorization URL to connect a service |
+| `/api/connectors/{name}/status` | GET | Get status of a specific connector |
+| `/api/connectors/{name}/disconnect` | POST | Disconnect a connected service |
+
+### Example: Connect GitHub
+
+```bash
+# Get authorization link
+POST /api/connectors/connect
+Content-Type: application/json
+
+{
+  "connector": "github",
+  "redirect_url": "http://localhost:3000/dashboard"
+}
+
+# Response
+{
+  "auth_url": "https://github.com/login/oauth/authorize?...",
+  "connector": "github"
+}
+```
+
 ## Architecture
 
 ```
@@ -157,6 +351,7 @@ org-switcher-app/
 ├── backend/                  # Django REST API
 │   ├── auth_app/
 │   │   ├── scalekit_client.py   # Scalekit SDK wrapper
+│   │   ├── connector_service.py # Agent Auth connector service
 │   │   ├── views.py             # API endpoints
 │   │   ├── middleware.py        # Token refresh middleware
 │   │   └── decorators.py        # Auth decorators
@@ -169,12 +364,15 @@ org-switcher-app/
         │   ├── auth/callback/page.tsx    # OAuth callback
         │   └── dashboard/page.tsx        # Dashboard with org switcher
         ├── components/
-        │   └── CustomOrgSwitcher.tsx     # Custom org switcher
+        │   ├── CustomOrgSwitcher.tsx     # Custom org switcher
+        │   └── ConnectorsPanel.tsx       # Connected services panel
         └── lib/
             └── api.ts                    # API client
 ```
 
 ## API Endpoints
+
+### Authentication
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -184,6 +382,15 @@ org-switcher-app/
 | `/api/auth/switch-org` | POST | Switch to different organization |
 | `/api/auth/logout` | POST | Logout user |
 | `/api/health` | GET | Health check |
+
+### Connectors (Agent Auth)
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/connectors` | GET | List all connectors with status |
+| `/api/connectors/connect` | POST | Get auth URL to connect a service |
+| `/api/connectors/{name}/status` | GET | Get specific connector status |
+| `/api/connectors/{name}/disconnect` | POST | Disconnect a service |
 
 ### Request Examples
 
@@ -274,6 +481,16 @@ Solution: Upgrade to Python 3.10 or later. The Scalekit SDK uses union type synt
 - Check that the `oid` claim is present in the JWT token
 - Verify the callback is extracting the org ID correctly
 
+**Connector errors (RESOURCE_NOT_FOUND or INTERNAL_ERROR):**
+- Verify the connector is configured in your Scalekit dashboard
+- Check that the `connection_name` in your code matches exactly what's in the Scalekit dashboard
+- The connection name often includes a unique suffix (e.g., `github-WZZtcfBc` instead of just `github`)
+- Ensure the OAuth app credentials are correctly configured in Scalekit
+
+**OAuth callback processed twice (invalid_grant error):**
+- This can happen with React Strict Mode in development
+- The fix uses `useRef` to prevent duplicate processing in the callback page
+
 ## Technologies
 
 **Backend:**
@@ -291,3 +508,7 @@ Solution: Upgrade to Python 3.10 or later. The Scalekit SDK uses union type synt
 
 - [Scalekit Documentation](https://docs.scalekit.com)
 - [Organization Switching Guide](https://docs.scalekit.com/authenticate/manage-users-orgs/organization-switching)
+- [Agent Auth Quickstart](https://docs.scalekit.com/agent-auth/quickstart/)
+- [GitHub Connector Reference](https://docs.scalekit.com/reference/agent-connectors/github/)
+- [Slack Connector Reference](https://docs.scalekit.com/reference/agent-connectors/slack/)
+- [Google Ads Connector Reference](https://docs.scalekit.com/reference/agent-connectors/google_ads/)

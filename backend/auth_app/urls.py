@@ -16,6 +16,12 @@ urlpatterns = [
     # Organization switching
     path('auth/switch-org', views.switch_organization_view, name='switch_org'),
 
+    # Connector endpoints (Agent Auth)
+    path('connectors', views.connectors_list_view, name='connectors_list'),
+    path('connectors/connect', views.connector_connect_view, name='connector_connect'),
+    path('connectors/<str:connector_name>/status', views.connector_status_view, name='connector_status'),
+    path('connectors/<str:connector_name>/disconnect', views.connector_disconnect_view, name='connector_disconnect'),
+
     # Health check
     path('health', views.health_check_view, name='health'),
 ]

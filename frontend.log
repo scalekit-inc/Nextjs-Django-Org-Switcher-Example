@@ -4,13 +4,11 @@
 
    ▲ Next.js 14.0.4
    - Local:        http://localhost:3000
-   - Environments: .env.local
 
- ✓ Ready in 1144ms
+ ✓ Ready in 1239ms
  ○ Compiling / ...
- ✓ Compiled / in 1117ms (426 modules)
- ✓ Compiled in 256ms (221 modules)
- ✓ Compiled /auth/callback in 500ms (420 modules)
- ○ Compiling /dashboard ...
- ✓ Compiled /dashboard in 645ms (428 modules)
+ ✓ Compiled / in 860ms (428 modules)
+ ✓ Compiled in 80ms (223 modules)
+ ✓ Compiled /auth/callback in 225ms (422 modules)
+ ✓ Compiled /dashboard in 138ms (432 modules)
 [?25h
